@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #1F487E;
+    background-color: #2f3c50; /*/2b3b4e*/
     color: white;
     display: flex;
     justify-content: center;
@@ -20,10 +20,10 @@ h1 {
 }
 .container {
     text-align: center;
-    background-color: #1D3461;
+    background-color: #131522;
     padding: 30px;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     margin-bottom: 350px;
 }
@@ -33,8 +33,8 @@ h1 {
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -81,7 +81,7 @@ h1 {
 .social-link i:hover, 
 .mail-button i:hover,
 .cv-button i:hover {
-    color: #6290C8;
+    color: #2f3c50;
 }
 
 .hover-text {
