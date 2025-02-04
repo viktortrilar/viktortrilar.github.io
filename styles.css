@@ -14,6 +14,10 @@ body {
     height: 100vh;
 }
 
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
 .container {
     text-align: center;
     background-color: #2c3e50;
@@ -55,7 +59,8 @@ body {
 }
 
 .social-link,
-.mail-button {
+.mail-button,
+.cv-button {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -66,21 +71,22 @@ body {
 } 
 
 .social-link i, 
-.mail-button i {
+.mail-button i,
+.cv-button i {
     font-size: 30px;
     color: #0073e6;
     transition: color 0.3s ease;
 }
 
 .social-link i:hover, 
-.mail-button i:hover {
+.mail-button i:hover,
+.cv-button i:hover {
     color: #005bb5;
 }
 
-
 .hover-text {
     position: absolute;
-    bottom: -30px;
+    bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
@@ -95,6 +101,8 @@ body {
 }
 
 .social-link:hover .hover-text,
-.mail-button:hover .hover-text {
+.mail-button:hover .hover-text,
+.cv-button:hover .hover-text {
     opacity: 1;
 }
+
