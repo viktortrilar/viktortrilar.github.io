@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viktor Trilar — Data Engineer & AI</title>
+    <title>Viktor Trilar — Applied AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,66 +11,70 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="bg-blob blob-1"></div>
     <div class="bg-blob blob-2"></div>
 
-    <div class="card" id="card">
-        <div class="card-inner">
+    <div class="page-wrapper">
+        <div class="card-col">
+            <div class="card" id="card">
+                <div class="card-inner">
 
-            <div class="avatar-wrap">
-                <img src="Images/Viktor_Trilar.png" alt="Viktor Trilar" class="avatar">
-                <div class="avatar-ring"></div>
+                    <div class="avatar-wrap">
+                        <img src="Images/Viktor_Trilar.png" alt="Viktor Trilar" class="avatar">
+                        <div class="avatar-ring"></div>
+                    </div>
+
+                    <div class="name-block">
+                        <h1 class="name">Viktor Trilar</h1>
+                        <p class="tagline">Applied AI Intern<br>Cognitive Technologies Research Group</p>
+                    </div>
+
+                    <p class="bio">
+                        Building ML systems for predictive maintenance and 3D quality inspection.
+                        Focused on real-world data engineering and applied AI.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">Open3D / SfM</span>
+                        <span class="tag">Apache Kafka</span>
+                        <span class="tag">Snowflake</span>
+                        <span class="tag">HPC / SLURM</span>
+                    </div>
+
+                </div>
             </div>
-
-            <div class="name-block">
-                <h1 class="name">Viktor Trilar</h1>
-                <p class="tagline">Applied AI Intern at Cognitive Technologies Research Group</p>
-            </div>
-
-            <p class="bio">
-                Building ML systems for predictive maintenance and 3D quality inspection.
-                Focused on real-world data engineering and applied AI.
-            </p>
-
-            <div class="tags">
-                <span class="tag">PyTorch</span>
-                <span class="tag">Transformers</span>
-                <span class="tag">Open3D / SfM</span>
-                <span class="tag">Apache Kafka</span>
-                <span class="tag">Snowflake</span>
-                <span class="tag">HPC / SLURM</span>
-            </div>
-
-            <div class="divider"></div>
+        </div>
+        <div class="detail-col">
 
             <nav class="links">
-                <a href="https://github.com/viktortrilar" target="_blank" class="link-item" aria-label="GitHub">
+                <p class="col-heading">Connect</p>
+                <a href="https://github.com/viktortrilar" target="_blank" class="link-item">
                     <span class="link-icon"><i class="fa-brands fa-github"></i></span>
                     <span class="link-label">GitHub</span>
                     <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                 </a>
-                <a href="https://www.linkedin.com/in/viktortrilar/" target="_blank" class="link-item" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/viktortrilar/" target="_blank" class="link-item">
                     <span class="link-icon"><i class="fa-brands fa-linkedin"></i></span>
                     <span class="link-label">LinkedIn</span>
                     <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                 </a>
-                <a href="mailto:viktor.trilar1@gmail.com" class="link-item" aria-label="Email">
+                <a href="mailto:viktor.trilar1@gmail.com" class="link-item">
                     <span class="link-icon"><i class="fa-solid fa-envelope"></i></span>
                     <span class="link-label">Contact</span>
                     <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                 </a>
-                <a href="Images/Viktor_Trilar_CV.pdf" target="_blank" class="link-item link-resume" aria-label="Resume">
+                <a href="Images/Viktor_Trilar_CV.pdf" target="_blank" class="link-item link-resume">
                     <span class="link-icon"><i class="fa-solid fa-file-lines"></i></span>
                     <span class="link-label">Resume</span>
                     <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                 </a>
             </nav>
 
-            <div class="divider"></div>
-
             <div class="projects">
-                <p class="projects-heading">Selected Projects</p>
-
+                <p class="col-heading">Selected Projects</p>
                 <a href="https://github.com/CoRe-Interns/trainee-2026-viktor-pdm-sensorfusion" target="_blank" class="project-item">
                     <div class="project-meta">
                         <span class="project-tag">Transformers · PyTorch · HPC</span>
@@ -79,16 +83,14 @@
                     <p class="project-title">PDM Sensor Fusion</p>
                     <p class="project-desc">Cold-start predictive maintenance using a PatchTST-style transformer encoder. LOMTO macro AUC 0.897 across 27 machine types.</p>
                 </a>
-
                 <a href="https://github.com/CoRe-Interns/trainee-2026-viktor-3d-deviation" target="_blank" class="project-item">
                     <div class="project-meta">
                         <span class="project-tag">Open3D · COLMAP · OpenCV</span>
                         <span class="project-status">In progress</span>
                     </div>
                     <p class="project-title">3D Inspection Pipeline</p>
-                    <p class="project-desc">Photo/video to 3D point cloud reconstruction, aligned against reference CAD via FPFH + ICP. Outputs deviation heatmaps and pass/fail reports.</p>
+                    <p class="project-desc">Photo/video to 3D point cloud, aligned against reference CAD via FPFH + ICP. Outputs deviation heatmaps and pass/fail reports.</p>
                 </a>
-
                 <a href="https://github.com/viktortrilar" target="_blank" class="project-item">
                     <div class="project-meta">
                         <span class="project-tag">LSTM · FastAPI · PostgreSQL · MQTT</span>
@@ -104,15 +106,17 @@
 
     <script>
         const card = document.getElementById('card');
-        document.addEventListener('mousemove', (e) => {
-            const cx = window.innerWidth / 2;
-            const cy = window.innerHeight / 2;
-            const dx = (e.clientX - cx) / cx;
-            const dy = (e.clientY - cy) / cy;
+        const cardCol = document.querySelector('.card-col');
+
+        cardCol.addEventListener('mousemove', (e) => {
+            if (window.innerWidth < 900) return;
+            const rect = cardCol.getBoundingClientRect();
+            const dx = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
+            const dy = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
             card.style.transform = `rotateY(${dx * 4}deg) rotateX(${-dy * 4}deg)`;
         });
-        document.addEventListener('mouseleave', () => {
-            card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+        cardCol.addEventListener('mouseleave', () => {
+            card.style.transform = '';
         });
     </script>
 </body>
