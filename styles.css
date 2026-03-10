@@ -6,12 +6,12 @@
 :root {
     --bg:         #0d0f14;
     --panel-bg:   #13161f;
-    --accent:     #7eeaaa;
-    --accent2:    #5bc4f5;
+    --accent:     #e8a45c;
+    --accent2:    #d4784b;
     --text:       #e8eaf0;
     --muted:      #7a8090;
-    --tag-bg:     rgba(126,234,170,0.08);
-    --tag-border: rgba(126,234,170,0.2);
+    --tag-bg:     rgba(232,164,92,0.08);
+    --tag-border: rgba(232,164,92,0.2);
     --row-hover:  #1a1e2a;
     --lw: 380px;
 }
@@ -23,6 +23,8 @@ body {
     font-family: 'DM Sans', sans-serif;
     color: var(--text);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ════════════════════════════════════
@@ -34,8 +36,8 @@ body {
     pointer-events: none; z-index: 0;
     animation: blobDrift 14s ease-in-out infinite alternate;
 }
-.blob-green { width:560px; height:560px; background:radial-gradient(circle,#7eeaaa,transparent 68%); top:-180px; left:-180px; }
-.blob-blue  { width:440px; height:440px; background:radial-gradient(circle,#5bc4f5,transparent 68%); bottom:-140px; right:-120px; animation-delay:-7s; }
+.blob-green { width:560px; height:560px; background:radial-gradient(circle,#e8a45c,transparent 68%); top:-180px; left:-180px; }
+.blob-blue  { width:440px; height:440px; background:radial-gradient(circle,#d4784b,transparent 68%); bottom:-140px; right:-120px; animation-delay:-7s; }
 @keyframes blobDrift { to { transform: translate(40px, 28px); } }
 
 /* ════════════════════════════════════
@@ -83,12 +85,17 @@ body {
     gap: 32px;
     max-width: 500px;
     margin: 0 auto;
+    width: 100%;
 }
 
 /* ════════════════════════════════════
    DESKTOP — fixed left + scrolling right
    ════════════════════════════════════ */
 @media (min-width: 860px) {
+
+    body {
+        display: block;
+    }
 
     .left-panel {
         position: fixed;
@@ -115,6 +122,7 @@ body {
         padding: 56px 52px 72px 48px;
         min-height: 100vh;
         gap: 40px;
+        width: auto;
     }
 }
 
@@ -233,7 +241,7 @@ body {
 }
 .link-item:hover {
     background: var(--row-hover);
-    border-color: rgba(126,234,170,0.28);
+    border-color: rgba(232,164,92,0.28);
     transform: translateX(4px);
 }
 .link-item:hover .link-icon i { color: var(--accent); }
@@ -255,14 +263,14 @@ body {
 }
 
 .link-resume {
-    border-color: rgba(126,234,170,0.15);
-    background: rgba(126,234,170,0.04);
+    border-color: rgba(232,164,92,0.15);
+    background: rgba(232,164,92,0.04);
 }
 .link-resume .link-label  { color: var(--accent); }
 .link-resume .link-icon i { color: var(--accent); }
 .link-resume:hover {
-    background: rgba(126,234,170,0.09);
-    border-color: rgba(126,234,170,0.4);
+    background: rgba(232,164,92,0.09);
+    border-color: rgba(232,164,92,0.4);
 }
 
 /* ════════════════════════════════════
@@ -284,7 +292,7 @@ body {
 }
 .project-card:hover {
     background: rgba(255,255,255,0.055);
-    border-color: rgba(126,234,170,0.25);
+    border-color: rgba(232,164,92,0.25);
     transform: translateX(4px);
 }
 .project-top {
@@ -302,8 +310,8 @@ body {
 .badge {
     font-size: 10px; font-weight: 500;
     padding: 2px 9px; border-radius: 999px;
-    background: rgba(126,234,170,0.08);
-    border: 1px solid rgba(126,234,170,0.22);
+    background: rgba(232,164,92,0.08);
+    border: 1px solid rgba(232,164,92,0.22);
     color: var(--accent);
     white-space: nowrap; flex-shrink: 0;
 }
