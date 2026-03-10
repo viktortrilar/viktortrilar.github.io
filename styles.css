@@ -156,6 +156,12 @@ body {
     border-radius: 10px;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.18s, border-color 0.18s, transform 0.14s;
+}
+.skill-group:hover {
+    background: rgba(255,255,255,0.055);
+    border-color: rgba(232,164,92,0.25);
+    transform: translateX(4px);
 }
 .skill-group-title {
     font-size: 11px;
@@ -246,6 +252,12 @@ body {
     border-radius: 12px;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.18s, border-color 0.18s, transform 0.14s;
+}
+.project-card:hover {
+    background: rgba(255,255,255,0.055);
+    border-color: rgba(232,164,92,0.25);
+    transform: translateX(4px);
 }
 .project-top {
     display: flex;
