@@ -89,41 +89,12 @@ body {
 }
 
 /* ════════════════════════════════════
-   DESKTOP — fixed left + scrolling right
+   DESKTOP — wider centred column
    ════════════════════════════════════ */
-@media (min-width: 860px) {
-
-    body {
-        display: block;
-    }
-
-    .left-panel {
-        position: fixed;
-        inset: 0 auto 0 0;
-        width: var(--lw);
-        padding: 0 44px;
-        border-right: 1px solid rgba(255,255,255,0.05);
-        align-items: center;
-    }
-
-    .identity {
-        max-width: 100%;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0;
-        animation: none;
-    }
-
-    .right-panel {
-        margin-left: var(--lw);
-        max-width: none;
-        padding: 56px 52px 72px 48px;
-        min-height: 100vh;
-        gap: 40px;
-        width: auto;
-    }
+@media (min-width: 680px) {
+    .left-panel  { padding: 64px 20px 36px; }
+    .identity    { max-width: 560px; }
+    .right-panel { max-width: 560px; padding: 0 0 72px; gap: 40px; }
 }
 
 /* ════════════════════════════════════
@@ -262,12 +233,6 @@ body {
     transition: opacity 0.18s, transform 0.18s;
 }
 
-.link-resume {
-    border-color: rgba(232,164,92,0.15);
-    background: rgba(232,164,92,0.04);
-}
-.link-resume .link-label  { color: var(--accent); }
-.link-resume .link-icon i { color: var(--accent); }
 .link-resume:hover {
     background: rgba(232,164,92,0.09);
     border-color: rgba(232,164,92,0.4);
