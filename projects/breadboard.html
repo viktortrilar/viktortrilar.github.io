@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadboard Circuit Verification — Viktor Trilar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <main class="right-panel">
+
+        <section class="section">
+            <nav class="links">
+                <a href="../index.html" class="link-item">
+                    <span class="link-icon"><i class="fa-solid fa-arrow-left"></i></span>
+                    <span class="link-label">Back to home</span>
+                    <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </nav>
+        </section>
+
+        <section class="section">
+            <p class="section-label">Project</p>
+            <h1 class="name" style="text-align:left;">Breadboard Circuit Verification</h1>
+            <p class="tagline" style="text-align:left;">PyTorch · YOLOv8 · Blender · NIT Sendai</p>
+            <p class="bio" style="text-align:left;">
+                Automated verification of student breadboard circuits. A heading-aware
+                DQN wire tracer and YOLOv8 component detection, trained on synthetic
+                data generated in Blender, drive a bilingual FastAPI web app. Developed
+                during a research exchange at NIT Sendai, Japan, under a JSPS grant.
+            </p>
+        </section>
+
+        <section class="section">
+            <p class="section-label">Pipeline</p>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-stack">Stage 01</span>
+                    </div>
+                    <p class="project-name">Board Detection</p>
+                    <p class="project-desc">Locate and rectify the breadboard within the input image to establish a canonical working frame.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-stack">Stage 02</span>
+                    </div>
+                    <p class="project-name">Wire Segmentation</p>
+                    <p class="project-desc">Segment connecting wires from the board and component clutter to isolate conductive paths.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-stack">Stage 03</span>
+                    </div>
+                    <p class="project-name">DQN Wire Tracing</p>
+                    <p class="project-desc">A heading-aware deep reinforcement learning agent traces each wire endpoint to endpoint across the segmentation mask.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-stack">Stage 04</span>
+                    </div>
+                    <p class="project-name">Component Detection</p>
+                    <p class="project-desc">YOLOv8 detects and classifies electronic components and their breadboard pin positions.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-stack">Stage 05</span>
+                    </div>
+                    <p class="project-name">Topology Validation</p>
+                    <p class="project-desc">Reconstruct the circuit netlist from traced wires and detected components, then validate against the expected topology.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <p class="section-label">Key Results</p>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <p class="skill-group-title">Wire Match</p>
+                    <p class="skill-group-items">99.4% — synthetic set, 3000 images</p>
+                </div>
+                <div class="skill-group">
+                    <p class="skill-group-title">Component Detection</p>
+                    <p class="skill-group-items">99.5% mAP</p>
+                </div>
+                <div class="skill-group">
+                    <p class="skill-group-title">Real Boards</p>
+                    <p class="skill-group-items">100% on distinct-color boards</p>
+                </div>
+                <div class="skill-group">
+                    <p class="skill-group-title">Blind Discovery</p>
+                    <p class="skill-group-items">87% board-level discovery</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <p class="section-label">Resources</p>
+            <nav class="links">
+                <a href="../papers/breadboard_verification_2026.pdf" target="_blank" class="link-item link-resume">
+                    <span class="link-icon"><i class="fa-solid fa-file-lines"></i></span>
+                    <span class="link-label">Technical Report (PDF)</span>
+                    <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </nav>
+        </section>
+
+        <section class="section">
+            <p class="section-label">Credit</p>
+            <p class="bio" style="text-align:left;">
+                Supervisor: Jun Suzuki. Supported by JSPS Grant No. 24K06211.
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>
