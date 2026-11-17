@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAL: Valmet Asset Locator, Viktor Trilar</title>
+    <meta name="description" content="VAL turns a 3D Gaussian splatting scan of a plant room into a digital twin: 440 objects found and named automatically, safe routes to faulty equipment, and an offline assistant that explains the fault from the plant's records.">
+    <meta property="og:title" content="VAL: Valmet Asset Locator">
+    <meta property="og:description" content="A digital twin from one 3D scan: 440 objects found and named automatically, safe routes to faulty equipment, and an offline assistant that explains the fault from the plant's records.">
+    <meta property="og:image" content="https://viktortrilar.github.io/Images/val/route.jpg">
+    <meta property="og:image:width" content="1440">
+    <meta property="og:image:height" content="860">
+    <meta property="og:url" content="https://viktortrilar.github.io/projects/val.html">
+    <meta property="og:site_name" content="Viktor Trilar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1F4BFF">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=3">
+</head>
+<body>
+
+<div class="wrap">
+
+    <a class="back" href="../index.html">Back to Viktor Trilar</a>
+
+    <header class="page-head">
+        <h1 class="name">VAL: Valmet Asset Locator</h1>
+        <p class="role">Since AI Hackathon 2026, Valmet’s Industrial Metaverse challenge</p>
+        <p class="intro">
+            When a machine in a plant room starts failing, the technician sent to fix it
+            first has to find it, get to it safely, and piece together what’s wrong from
+            drawings, maintenance records and manuals. VAL turns one 3D scan of the room
+            into a digital twin that knows what’s in it, where you can walk, and what the
+            records say about each machine. Everything runs on one laptop with no internet,
+            so the plant’s data never leaves the site.
+        </p>
+        <ul class="contact">
+            <li class="cv"><a href="https://github.com/Sairanyx/VAL" target="_blank" rel="noopener">See the code on GitHub</a></li>
+        </ul>
+    </header>
+
+    <section class="section" aria-labelledby="h-results">
+        <h2 id="h-results">Results</h2>
+        <div class="results three">
+            <div class="figure"><strong>440</strong><span>objects found in the scan, each framed in 3D and named</span></div>
+            <div class="figure"><strong>20 of 30</strong><span>equipment records linked to an object of the right kind</span></div>
+            <div class="figure"><strong>384 of 440</strong><span>objects reachable on foot; every one reachable by a small robot</span></div>
+            <div class="figure"><strong>56 of 60</strong><span>test questions answered correctly by the assistant; every unsafe request refused</span></div>
+            <div class="figure"><strong>9 of 10</strong><span>spoken commands understood with background noise added</span></div>
+            <div class="figure"><strong>6.5 s</strong><span>to load the scene on a laptop without a graphics card</span></div>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="h-what">
+        <h2 id="h-what">What it does</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Every object, framed</h3>
+                <p>Each object in the room gets a frame coloured by its type. Equipment with a record shows its condition and health, and anything that needs attention glows as you approach it. Filters narrow the room by type, condition or whether an object can move, and the equipment list puts the most urgent first.</p>
+                <figure class="shot">
+                    <img src="../Images/val/find.jpg" alt="The scanned boiler room with coloured frames around equipment, filters on the left and an equipment list sorted by urgency" width="1440" height="860" loading="lazy">
+                    <figcaption>Filters and the equipment list, sorted by urgency</figcaption>
+                </figure>
+            </div>
+            <div class="feature">
+                <h3>A safe route to the fault</h3>
+                <p>One button plans a route to the device that needs attention most, around walls, machines and anything that has been moved. A minimap shows where you are and where you’re going, and the equipment you pass on the way shows its status.</p>
+                <figure class="shot">
+                    <img src="../Images/val/route.jpg" alt="A route drawn on the floor of the scanned room, leading from the entrance to a pump, with a minimap in the corner" width="1440" height="860" loading="lazy">
+                    <figcaption>A route from the entrance to the critical pump</figcaption>
+                </figure>
+            </div>
+            <div class="feature">
+                <h3>Val explains what’s wrong</h3>
+                <p>When you arrive, the assistant, Val, explains the fault: the device’s health, the likely cause, what to check first and the safety steps, citing the record IDs it used. You can ask follow-up questions by typing or talking, such as when the device was last serviced or how its sensors are trending. Val also controls the view: “show only pumps”, “take me to P-005”, “move the cart 2 metres left”.</p>
+                <p>Every device’s full record also opens as a dashboard, with its health, sensor trends, alarms and maintenance history.</p>
+                <figure class="shot">
+                    <img src="../Images/val/val.jpg" alt="The assistant panel open beside a pump, explaining its fault with health, likely cause, checks and safety steps" width="1440" height="860" loading="lazy">
+                    <figcaption>Val explaining the fault on arrival</figcaption>
+                </figure>
+                <figure class="shot">
+                    <img src="../Images/val/dashboard.jpg" alt="A device dashboard with health score, sensor trend charts, alarms and maintenance history" width="1440" height="860" loading="lazy">
+                    <figcaption>A device’s dashboard</figcaption>
+                </figure>
+            </div>
+            <div class="feature">
+                <h3>From a simple model to the real room</h3>
+                <p>The same room can be shown five ways: empty, a simple BIM model of fitted shapes, a rougher model built from the scan’s surfaces, the raw point cloud, and the real scan. The BIM model exports to IFC, which CAD and BIM tools read, and the floor plan exports to DXF.</p>
+                <figure class="shot">
+                    <img src="../Images/val/views.jpg" alt="Four views of the same room side by side: a simple BIM model, a rough surface model, a point cloud and the photographic scan" width="1440" height="860" loading="lazy">
+                    <figcaption>The simple BIM, the surface model, the point cloud and the real scan</figcaption>
+                </figure>
+            </div>
+            <div class="feature">
+                <h3>A room you can change</h3>
+                <p>Objects can be moved, turned, copied, split or deleted with the mouse, the keyboard, touch or by asking Val. The scanned object itself moves, not just its frame: its points are cut out of the scan and the floor underneath is filled in. A move into a wall or a machine is refused with the reason, the route updates around the new layout, and every change can be undone.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="h-how">
+        <h2 id="h-how">How it works</h2>
+        <ol class="steps">
+            <li><div><h3>Find the objects</h3><p>A scan has no objects in it, only 1.7 million coloured blobs. VAL renders 700 views of it, SAM 3 cuts every view into object masks, and matching the masks across views turns 22,671 masks into 440 objects, each a set of the scan’s own points with a 3D box. This takes about 26 minutes on one GPU.</p></div></li>
+            <li><div><h3>Name them</h3><p>A Qwen vision-language model running locally names each object from several views: pump, valve, pipe and so on. The names were then checked against close-up screenshots to correct the clear mistakes.</p></div></li>
+            <li><div><h3>Link the equipment records</h3><p>The plant’s records describe each device but not where it is, so each record is placed on an object of the right kind: a pump record on a pump, never on a broom. Every link stores how it was made and how sure it is, and the twin never claims an identity it doesn’t know.</p></div></li>
+            <li><div><h3>Map where you can walk</h3><p>A floor map is built from the scan in 5 cm cells, recording how much room there is at body height for a 0.6 m-wide person, or low down for a small robot. Routes are planned with A* and stop where the device is in view. Moving an object blocks its new spot and frees its old one, and the route updates while you drag.</p></div></li>
+            <li><div><h3>Answer from the records</h3><p>Code looks up every fact first and checks each ID, tag and number. A small language model on the laptop only puts those facts into words, and without one Val still answers from templates. Safety rules refuse anything that would operate the plant or skip a safety step. Speech is recognised on the laptop with faster-whisper.</p></div></li>
+            <li><div><h3>Serve it on site</h3><p>A FastAPI backend serves routes, move checks, Val and the exports. The viewer runs in any browser with three.js and Spark, which draws the scan, and it lowers its resolution on weak graphics, so it runs on a laptop without a graphics card. A tablet or phone on the same network can open it too.</p></div></li>
+        </ol>
+    </section>
+
+    <section class="section" aria-labelledby="h-limits">
+        <h2 id="h-limits">Limits</h2>
+        <ul class="limits">
+            <li>Equipment records are placed on objects of the right type, not confirmed. Tags, nameplates or QR codes seen in the scan could make the links certain.</li>
+            <li>Object names were checked from screenshots by an AI model, not by a person.</li>
+            <li>Sensor readings are a 3-day sample from the records, not a live feed from a control system.</li>
+            <li>The technician’s position is simulated: the camera is the technician.</li>
+        </ul>
+    </section>
+
+    <section class="section" aria-labelledby="h-stack">
+        <h2 id="h-stack">Built with</h2>
+        <div class="prose">
+            <p>SAM 3, Qwen VLM, 3D Gaussian splatting, faster-whisper, a local small language model, FastAPI, three.js and Spark, with IFC and DXF export.</p>
+            <p>Built in a weekend at the Since AI Hackathon 2026 for Valmet’s Industrial Metaverse challenge, on Valmet’s scan of a boiler room and a sample set of 30 equipment records.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="../index.html">Viktor Trilar</a>
+        <a href="mailto:vtrilar@proton.me">vtrilar@proton.me</a>
+    </footer>
+
+</div>
+</body>
+</html>

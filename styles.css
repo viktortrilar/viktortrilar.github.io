@@ -197,12 +197,30 @@ a:hover { color: var(--signal); text-decoration-color: currentColor; }
 .steps p { color: var(--ink-2); max-width: 64ch; }
 
 .results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; }
+.results.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* Feature walkthrough with screenshots */
+.features { display: grid; gap: 40px; }
+.feature h3 { font-size: 18px; font-weight: 650; margin-bottom: 6px; }
+.feature p { max-width: 68ch; }
+.feature p + p { margin-top: 8px; }
+.shot { margin: 16px 0 0; }
+.shot img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 2px; background: var(--rule); }
+.shot figcaption { font-size: 14px; color: var(--ink-2); margin-top: 8px; }
+
+.limits { list-style: none; max-width: 68ch; }
+.limits li { position: relative; padding-left: 18px; margin-top: 6px; }
+.limits li:first-child { margin-top: 0; }
+.limits li::before { content: ''; position: absolute; left: 2px; top: 0.72em; width: 6px; height: 1.5px; background: var(--ink-2); }
+.prose p { max-width: 68ch; }
+.prose p + p { margin-top: 10px; }
 
 /* ── Responsive ───────────────────────── */
 @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr; }
     .hero .portrait { justify-self: start; width: min(100%, 260px); order: -1; margin: 14px; }
     .section { grid-template-columns: 1fr; gap: 20px; }
+    .results.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
     body { font-size: 16px; }
@@ -211,6 +229,6 @@ a:hover { color: var(--signal); text-decoration-color: currentColor; }
     .figure span { margin-top: 0; max-width: none; }
     .skills { grid-template-columns: 1fr; gap: 2px; }
     .skills dd { margin-bottom: 10px; }
-    .results { grid-template-columns: 1fr; }
+    .results, .results.three { grid-template-columns: 1fr; }
 }
 
