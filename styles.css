@@ -59,7 +59,7 @@ a:hover { color: var(--signal); text-decoration-color: currentColor; }
 /* ── Hero ─────────────────────────────── */
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
     gap: clamp(24px, 5vw, 72px);
     align-items: center;
     padding-top: clamp(40px, 8vw, 96px);
@@ -68,16 +68,17 @@ a:hover { color: var(--signal); text-decoration-color: currentColor; }
 
 .portrait {
     position: relative;
-    width: 88px; height: 88px;
-    margin-bottom: 28px;
+    justify-self: end;
+    width: min(100%, 380px);
+    aspect-ratio: 1;
 }
-.portrait img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; display: block; filter: grayscale(0.15); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
 /* bounding-box corner brackets */
 .portrait::before, .portrait::after {
-    content: ''; position: absolute; inset: -7px; pointer-events: none;
-    border: 1.5px solid var(--signal);
-    clip-path: polygon(0 0, 14px 0, 14px 1.5px, 1.5px 1.5px, 1.5px 14px, 0 14px,
-                       0 calc(100% - 14px), 1.5px calc(100% - 14px), 1.5px calc(100% - 1.5px), 14px calc(100% - 1.5px), 14px 100%, 0 100%);
+    content: ''; position: absolute; inset: -14px; pointer-events: none;
+    border: 2px solid var(--signal);
+    clip-path: polygon(0 0, 32px 0, 32px 2px, 2px 2px, 2px 32px, 0 32px,
+                       0 calc(100% - 32px), 2px calc(100% - 32px), 2px calc(100% - 2px), 32px calc(100% - 2px), 32px 100%, 0 100%);
 }
 .portrait::after { transform: scaleX(-1); }
 
@@ -94,7 +95,7 @@ a:hover { color: var(--signal); text-decoration-color: currentColor; }
     font-weight: 500;
     font-size: clamp(19px, 2vw, 23px);
     line-height: 1.3;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
 }
 .intro { color: var(--ink-2); max-width: 46ch; margin-bottom: 28px; }
 
@@ -105,10 +106,6 @@ a:hover { color: var(--signal); text-decoration-color: currentColor; }
     background: var(--signal); color: var(--paper); text-decoration: none; border-radius: 2px;
 }
 .contact .cv a:hover { background: var(--ink); color: var(--paper); }
-
-.board { margin: 0; }
-.board canvas { display: block; width: 100%; aspect-ratio: 1 / 1; touch-action: pan-y; cursor: crosshair; }
-.board figcaption { font-size: 14px; line-height: 1.5; color: var(--ink-2); max-width: 44ch; margin-top: 10px; }
 
 /* ── Sections ─────────────────────────── */
 .section {
@@ -204,7 +201,7 @@ a:hover { color: var(--signal); text-decoration-color: currentColor; }
 /* ── Responsive ───────────────────────── */
 @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr; }
-    .board { max-width: 480px; }
+    .hero .portrait { justify-self: start; width: min(100%, 260px); order: -1; margin: 14px; }
     .section { grid-template-columns: 1fr; gap: 20px; }
 }
 @media (max-width: 560px) {
@@ -217,8 +214,3 @@ a:hover { color: var(--signal); text-decoration-color: currentColor; }
     .results { grid-template-columns: 1fr; }
 }
 
-.hint-touch { display: none; }
-@media (hover: none) {
-    .hint-pointer { display: none; }
-    .hint-touch { display: inline; }
-}
