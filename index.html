@@ -3,169 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viktor Trilar — Applied AI</title>
+    <title>Viktor Trilar, Applied AI Engineer</title>
+    <meta name="description" content="Viktor Trilar is an applied AI engineer working on computer vision for manufacturing: measuring parts from phone photos, checking breadboard circuits, and turning 3D scans into digital twins.">
+    <meta property="og:title" content="Viktor Trilar, Applied AI Engineer">
+    <meta property="og:description" content="Computer vision for manufacturing: part inspection from phone photos, breadboard circuit checking, 3D digital twins.">
+    <meta property="og:image" content="https://viktortrilar.github.io/Images/github_thumbnail.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <aside class="left-panel" id="left-panel">
-        <div class="identity" id="identity-card">
+<div class="wrap">
 
-            <div class="avatar-wrap">
-                <img src="Images/Viktor_Trilar.png" alt="Viktor Trilar" class="avatar">
-                <div class="avatar-ring"></div>
-            </div>
-
+    <header class="hero">
+        <div>
+            <div class="portrait"><img src="Images/Viktor_Trilar.png" alt="Portrait of Viktor Trilar" width="88" height="88"></div>
             <h1 class="name">Viktor Trilar</h1>
-            <p class="tagline">Applied AI Intern<br>Cognitive Technologies Research Group · Research Exchange, NIT Sendai 2026</p>
-
-            <p class="bio">
-                Building ML systems for predictive maintenance
-                and 3D quality inspection. Currently on research
-                exchange at NIT Sendai, Japan. Focused on real-world
-                data engineering and applied AI.
+            <p class="role">Applied AI engineer, computer vision</p>
+            <p class="intro">
+                I build vision systems for manufacturing: measuring parts from
+                phone photos, checking circuits from a single picture, and turning
+                3D scans into digital twins you can walk through. Currently at the
+                Cognitive Technologies Research Group in Turku.
             </p>
-
+            <ul class="contact">
+                <li class="cv"><a href="Images/Viktor_Trilar_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a></li>
+                <li><a href="mailto:vtrilar@proton.me">vtrilar@proton.me</a></li>
+                <li><a href="https://www.linkedin.com/in/viktortrilar/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/viktortrilar" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
         </div>
-    </aside>
 
-    <main class="right-panel">
+        <figure class="board">
+            <canvas id="board" role="img" aria-label="A printed calibration board with a grid of dots, seen at an angle"></canvas>
+            <figcaption>
+                <span class="hint-pointer">Move your pointer to move the camera.</span><span class="hint-touch">Tap the board to move the camera.</span> My thesis uses a printed dot
+                pattern like this one to work out where each phone photo was taken from.
+            </figcaption>
+        </figure>
+    </header>
 
-        <section class="section">
-            <p class="section-label">Connect</p>
-            <nav class="links">
-                <a href="https://viktortrilar.github.io/github" target="_blank" class="link-item">
-                    <span class="link-icon"><i class="fa-brands fa-github"></i></span>
-                    <span class="link-label">GitHub</span>
-                    <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <a href="https://www.linkedin.com/in/viktortrilar/" target="_blank" class="link-item">
-                    <span class="link-icon"><i class="fa-brands fa-linkedin-in"></i></span>
-                    <span class="link-label">LinkedIn</span>
-                    <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <a href="mailto:vtrilar@proton.me" class="link-item">
-                    <span class="link-icon"><i class="fa-solid fa-envelope"></i></span>
-                    <span class="link-label">Contact</span>
-                    <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <a href="Images/Viktor_Trilar_CV.pdf" target="_blank" class="link-item link-resume">
-                    <span class="link-icon"><i class="fa-solid fa-file-lines"></i></span>
-                    <span class="link-label">Resume</span>
-                    <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-            </nav>
-        </section>
+    <section class="section" aria-labelledby="h-exp">
+        <h2 id="h-exp">Experience</h2>
+        <ol class="timeline" reversed>
+            <li class="current">
+                <div class="entry-head">
+                    <h3>Applied AI Intern <span>Cognitive Technologies Research Group (CoRe), Turku</span></h3>
+                    <span class="date">Feb 2026 – present</span>
+                </div>
+                <ul class="points">
+                    <li>Developing machine learning systems for manufacturing, focusing on computer vision and predictive maintenance</li>
+                    <li>Benchmarking recent research models against classical methods and turning what works into working prototypes</li>
+                </ul>
+            </li>
+            <li>
+                <div class="entry-head">
+                    <h3>Research exchange <span>NIT Sendai College, Japan</span></h3>
+                    <span class="date">Apr – Jul 2026</span>
+                </div>
+                <ul class="points">
+                    <li>Three-month research exchange under Prof. Jun Suzuki, part of a project funded by the Japan Society for the Promotion of Science (JSPS)</li>
+                    <li>Built the breadboard circuit checker below, from the training data to the finished web app</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
 
-        <section class="section">
-            <p class="section-label">Skills</p>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <p class="skill-group-title">Programming</p>
-                    <p class="skill-group-items">Python, R</p>
+    <section class="section" aria-labelledby="h-proj">
+        <h2 id="h-proj">Projects</h2>
+        <ol class="projects">
+            <li class="project">
+                <div class="figure"><strong>±0.2 mm</strong><span>uncertainty reported on each dimension</span></div>
+                <div>
+                    <div class="entry-head">
+                        <h3>Part inspection station <span>Bachelor’s thesis, CoRe</span></h3>
+                        <span class="date">2026 – 2027</span>
+                    </div>
+                    <p class="stack">OpenCV, SAM 2, camera calibration, FastAPI, React</p>
+                    <ul class="points">
+                        <li>Measures small parts from phone photos taken on a turntable, by fitting the part’s CAD model to its outline in each image</li>
+                        <li>Works out each camera position from a printed dot pattern under the part, so the only hardware needed is a phone and a turntable</li>
+                        <li>Reports every dimension with its uncertainty (±0.2–0.4 mm) and refuses to measure when the images can’t be trusted; being validated against caliper readings</li>
+                    </ul>
                 </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Core Libraries</p>
-                    <p class="skill-group-items">Pandas, NumPy, Matplotlib, Scikit-Learn, SciPy</p>
+            </li>
+            <li class="project">
+                <div class="figure"><strong>99.4%</strong><span>of wires traced correctly</span></div>
+                <div>
+                    <div class="entry-head">
+                        <h3>Breadboard circuit checker <span>NIT Sendai</span></h3>
+                        <span class="date">2026 – present</span>
+                    </div>
+                    <p class="stack">YOLO, reinforcement learning, Blender, FastAPI</p>
+                    <ul class="points">
+                        <li>Checks a student’s breadboard wiring from one phone photo: YOLO detects the components (99.5% mAP) and a reinforcement learning agent traces each wire</li>
+                        <li>Trained on synthetic images rendered in Blender, which removed most of the manual labelling</li>
+                        <li>Deployed as a Japanese and English web app where teachers set exercises and see results for the whole class</li>
+                    </ul>
+                    <a class="more" href="projects/breadboard.html">Read about the circuit checker</a>
                 </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Deep Learning</p>
-                    <p class="skill-group-items">PyTorch, TensorFlow, Keras, Transformers, Masked Autoencoding, LSTM, GANs</p>
+            </li>
+            <li class="project">
+                <div class="figure"><strong>440</strong><span>pieces of equipment found and named</span></div>
+                <div>
+                    <div class="entry-head">
+                        <h3>VAL: Valmet Asset Locator <span>Since AI Hackathon 2026</span></h3>
+                        <span class="date">Nov 2026</span>
+                    </div>
+                    <p class="stack">SAM 3, Qwen VLM, 3D Gaussian splatting, three.js</p>
+                    <ul class="points">
+                        <li>Turned a 3D Gaussian splatting scan of a plant room into a digital twin you can walk through in the browser</li>
+                        <li>Found the equipment automatically: SAM 3 segmented 700 rendered views, the masks were merged into 440 3D objects, and the Qwen vision-language model named each one</li>
+                        <li>An offline assistant guides a technician to faulty equipment and explains the fault from the plant’s own records</li>
+                    </ul>
                 </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Computer Vision</p>
-                    <p class="skill-group-items">CNNs, YOLOv8, Blender 3.6, COLMAP (SfM), Open3D, ICP Registration, OpenCV</p>
+            </li>
+            <li class="project">
+                <div class="figure"><strong>0.897</strong><span>AUC on machine types it never saw</span></div>
+                <div>
+                    <div class="entry-head">
+                        <h3>Predictive maintenance <span>CoRe</span></h3>
+                        <span class="date">2026</span>
+                    </div>
+                    <p class="stack">PyTorch, transformers, SLURM</p>
+                    <ul class="points">
+                        <li>Transformer model that flags early signs of machine failure from sensor data, without needing past failures to learn from</li>
+                    </ul>
                 </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Time Series &amp; Forecasting</p>
-                    <p class="skill-group-items">PatchTST, Multi-horizon Forecasting, TSFMs (Chronos, TimesFM)</p>
-                </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Classical ML</p>
-                    <p class="skill-group-items">Isolation Forest, One-Class SVM, GMM, ECOD, LOF</p>
-                </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Data Engineering</p>
-                    <p class="skill-group-items">Apache Kafka, Apache Airflow, Snowflake, PostgreSQL, MQTT, FastAPI</p>
-                </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Data Analysis &amp; BI</p>
-                    <p class="skill-group-items">Power BI, Tableau, Excel</p>
-                </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Cloud and HPC</p>
-                    <p class="skill-group-items">Microsoft Azure, AWS, SLURM / CSC Puhti</p>
-                </div>
-                <div class="skill-group">
-                    <p class="skill-group-title">Languages</p>
-                    <p class="skill-group-items">Slovene — Native, English — C2, German — B2, Finnish — B1</p>
-                </div>
+            </li>
+        </ol>
+    </section>
+
+    <section class="section" aria-labelledby="h-skills">
+        <h2 id="h-skills">Skills</h2>
+        <dl class="skills">
+            <dt>Computer vision</dt><dd>OpenCV, YOLO, SAM, VGGT, Pi3, Qwen VLM</dd>
+            <dt>3D</dt><dd>COLMAP, Open3D, 3D Gaussian splatting, Blender, three.js</dd>
+            <dt>Machine learning</dt><dd>PyTorch, Scikit-Learn, transformers, reinforcement learning</dd>
+            <dt>Software</dt><dd>Python, JavaScript, FastAPI, React, PostgreSQL, Docker, Git</dd>
+            <dt>Tools</dt><dd>Linux, SLURM (CSC supercomputers), AWS, Azure</dd>
+            <dt>Languages</dt><dd>Slovene (native), English (C2), German (B2), Finnish (B1)</dd>
+        </dl>
+    </section>
+
+    <section class="section" aria-labelledby="h-edu">
+        <h2 id="h-edu">Education</h2>
+        <div class="edu">
+            <div class="entry-head">
+                <h3>B.Eng., Information and Communications Technology <span>Turku University of Applied Sciences</span></h3>
+                <span class="date">2024 – 2027 (expected)</span>
             </div>
-        </section>
+            <p>Major in Data Engineering and AI, GPA 4.4 / 5.0</p>
+            <p>Thesis: Model-based dimensional inspection of manufactured parts from phone camera images</p>
+        </div>
+    </section>
 
-        <section class="section">
-            <p class="section-label">Selected Projects</p>
-            <div class="projects">
+    <footer class="footer">
+        <span>Viktor Trilar, Turku, Finland</span>
+        <a href="mailto:vtrilar@proton.me">vtrilar@proton.me</a>
+    </footer>
 
-                <a href="projects/breadboard.html" class="project-card">
-                    <div class="project-top">
-                        <span class="project-stack">PyTorch · YOLOv8 · Blender</span>
-                        <span class="badge badge-done">Complete</span>
-                    </div>
-                    <p class="project-name">Breadboard Circuit Verification</p>
-                    <p class="project-desc">Automated verification of student breadboard circuits. DQN wire tracer (99.4% acc) + YOLOv8 detection (99.5% mAP). Synthetic training data via Blender. Bilingual FastAPI web app. NIT Sendai — JSPS grant.</p>
-                </a>
+</div>
 
-                <div class="project-card">
-                    <div class="project-top">
-                        <span class="project-stack">Transformers · PyTorch · HPC</span>
-                        <span class="badge">In progress</span>
-                    </div>
-                    <p class="project-name">PDM Sensor Fusion</p>
-                    <p class="project-desc">Cold-start predictive maintenance using a PatchTST-style transformer encoder. LOMTO macro AUC 0.897 across 27 machine types.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-top">
-                        <span class="project-stack">Open3D · COLMAP · OpenCV</span>
-                        <span class="badge">In progress</span>
-                    </div>
-                    <p class="project-name">3D Inspection Pipeline</p>
-                    <p class="project-desc">Photo/video → 3D point cloud, aligned against reference CAD via FPFH + ICP. Outputs deviation heatmaps and pass/fail reports.</p>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-top">
-                        <span class="project-stack">LSTM · FastAPI · PostgreSQL · MQTT</span>
-                        <span class="badge badge-done">Complete</span>
-                    </div>
-                    <p class="project-name">AIS Vessel Trajectory Prediction</p>
-                    <p class="project-desc">Real-time maritime vessel tracking and multi-horizon position forecasting (+3/+6/+12 min) from live Finnish Digitraffic AIS data.</p>
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <script>
-        const card = document.getElementById('identity-card');
-        const panel = document.getElementById('left-panel');
-
-        panel.addEventListener('mousemove', e => {
-            if (window.innerWidth < 860) return;
-            const r  = panel.getBoundingClientRect();
-            const dx = ((e.clientX - r.left)  / r.width  - 0.5) * 2;
-            const dy = ((e.clientY - r.top)   / r.height - 0.5) * 2;
-            card.style.transform = `perspective(700px) rotateY(${dx * 5}deg) rotateX(${-dy * 5}deg)`;
-        });
-        panel.addEventListener('mouseleave', () => {
-            card.style.transform = '';
-        });
-    </script>
+<script src="board.js"></script>
 </body>
 </html>
